@@ -1,0 +1,80 @@
+{
+  "language": "zh",
+  "lines": [
+    {
+      "text": "灯泡亮了，夜市开了",
+      "start_ms": 12400
+    },
+    {
+      "text": "锅里的油在唱歌",
+      "start_ms": 15900
+    },
+    {
+      "text": "我数着硬币走过人群",
+      "start_ms": 19300
+    },
+    {
+      "text": "每一步都踩在鼓点上",
+      "start_ms": 22800
+    },
+    {
+      "text": "",
+      "start_ms": 26200
+    },
+    {
+      "text": "老板喊一声",
+      "start_ms": 30500
+    },
+    {
+      "text": "（城市回一声）",
+      "start_ms": 30500
+    },
+    {
+      "text": "回声，回声，夜市的回声",
+      "start_ms": 34000
+    },
+    {
+      "text": "灯泡不灭，我们不散",
+      "start_ms": 37600
+    }
+  ],
+  "timing": "exact",
+  "translations": {
+    "ru": {
+      "lines": [
+        "Лампочки зажглись, ночной рынок открыт",
+        "Масло в сковороде поёт",
+        "Я считаю монеты и иду сквозь толпу",
+        "Каждый шаг попадает в бит",
+        "",
+        "Хозяин крикнет раз",
+        "(город откликнется)",
+        "Эхо, эхо, эхо ночного рынка",
+        "Пока горят лампочки, мы не расходимся"
+      ],
+      "by": "Example Curator, by hand"
+    },
+    "en": {
+      "lines": [
+        "The bulbs are on, the night market's open",
+        "The oil in the wok is singing",
+        "I count my coins and walk through the crowd",
+        "Every step lands on the beat",
+        "",
+        "The stall keeper calls out once",
+        "(the city calls back)",
+        "Echo, echo, the night market's echo",
+        "While the bulbs stay on, we don't go home"
+      ],
+      "by": "Machine translation, checked by Example Curator"
+    }
+  },
+  "source": {
+    "name": "Lao Dengpao on Bandcamp",
+    "url": "https://example-lao-dengpao.bandcamp.com/track/dengpao-liang-le"
+  },
+  "rights": {
+    "statement": "Made-up words, written for this example.",
+    "license": "CC0-1.0"
+  }
+}

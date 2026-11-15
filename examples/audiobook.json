@@ -1,0 +1,148 @@
+{
+  "etui": "1.0",
+  "id": "c7e1f2a3-4b5c-4d6e-8f70-1a2b3c4d5e6f",
+  "revision": 1,
+  "updated": "2026-10-18T12:00:00+02:00",
+  "kind": "audiobook",
+  "title": "The Time Machine",
+  "subtitle": "H. G. Wells, read by Sam Example",
+  "language": "en",
+  "artwork": "images/cover.jpg",
+  "people": [
+    {
+      "id": "wells",
+      "name": "H. G. Wells",
+      "sort_name": "Wells, H. G."
+    },
+    {
+      "id": "sam",
+      "name": "Sam Example"
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/time-machine-part-1.mp3",
+      "sha256": "c51add14258b23661b5ba24bd479707bdda2b55bf7f2f25bc08d1cf72d8ae5cd",
+      "bytes": 48000000,
+      "format": "mp3",
+      "duration_ms": 6000000,
+      "codec": "mp3",
+      "bitrate_kbps": 64
+    },
+    {
+      "path": "audio/time-machine-part-2.mp3",
+      "sha256": "69800e15024fc7991c6a8582a426f6f96aefc07dbc28011049cf658a6ac49efd",
+      "bytes": 45600000,
+      "format": "mp3",
+      "duration_ms": 5700000,
+      "codec": "mp3",
+      "bitrate_kbps": 64
+    }
+  ],
+  "items": [
+    {
+      "id": "part-1",
+      "file": "audio/time-machine-part-1.mp3",
+      "title": "Part One",
+      "credits": [
+        {
+          "person": "wells",
+          "role": "author"
+        },
+        {
+          "person": "sam",
+          "role": "narrator"
+        }
+      ],
+      "chapters": [
+        {
+          "start_ms": 0,
+          "title": "Chapter 1",
+          "exact": true
+        },
+        {
+          "start_ms": 840000,
+          "title": "Chapter 2",
+          "exact": true
+        },
+        {
+          "start_ms": 1860000,
+          "title": "Chapter 3",
+          "exact": true
+        },
+        {
+          "start_ms": 2880000,
+          "title": "Chapter 4",
+          "exact": true
+        },
+        {
+          "start_ms": 3960000,
+          "title": "Chapter 5",
+          "exact": true
+        },
+        {
+          "start_ms": 5040000,
+          "title": "Chapter 6",
+          "exact": true
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "file": "audio/time-machine-part-2.mp3",
+      "title": "Part Two",
+      "credits": [
+        {
+          "person": "wells",
+          "role": "author"
+        },
+        {
+          "person": "sam",
+          "role": "narrator"
+        }
+      ],
+      "chapters": [
+        {
+          "start_ms": 0,
+          "title": "Chapter 7",
+          "exact": true
+        },
+        {
+          "start_ms": 900000,
+          "title": "Chapter 8",
+          "exact": true
+        },
+        {
+          "start_ms": 1980000,
+          "title": "Chapter 9",
+          "exact": true
+        },
+        {
+          "start_ms": 3000000,
+          "title": "Chapter 10",
+          "exact": true
+        },
+        {
+          "start_ms": 3840000,
+          "title": "Chapter 11",
+          "exact": true
+        },
+        {
+          "start_ms": 4800000,
+          "title": "Chapter 12",
+          "exact": true
+        }
+      ]
+    }
+  ],
+  "playback": {
+    "resume": "always",
+    "skip_back_s": 15,
+    "skip_forward_s": 30,
+    "speed_adjustable": true
+  },
+  "rights": {
+    "statement": "The text is in the public domain. This reading is dedicated to the public domain.",
+    "license": "CC0-1.0"
+  }
+}

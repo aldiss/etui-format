@@ -1,0 +1,91 @@
+{
+  "etui": "1.0",
+  "id": "e2b4c6d8-1a3f-4e5b-9c7d-0f1e2d3c4b5a",
+  "revision": 1,
+  "updated": "2026-10-18T12:00:00+02:00",
+  "kind": "fragments",
+  "title": "Saturday warm-up picks",
+  "description": "Three stretches I keep coming back to, for a friend's party.",
+  "curator": {
+    "name": "Example Curator"
+  },
+  "people": [
+    {
+      "id": "mara-volk",
+      "name": "Mara Volk"
+    },
+    {
+      "id": "desert-unit",
+      "name": "Desert Unit"
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/mara-volk-live-at-halle-9.m4a",
+      "sha256": "84e45b48c385cbc1da9ddb91e5ebcdbb4e63514faf9bb0270b434ac4622b5f6b",
+      "bytes": 240000000,
+      "format": "m4a",
+      "duration_ms": 7500000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    },
+    {
+      "path": "audio/desert-unit-live-in-the-garden.m4a",
+      "sha256": "2382b0b5f331b0b319ecdbebb39f8e4c5ef8d15f17a2a30b2815df6ee0cb3208",
+      "bytes": 176640000,
+      "format": "m4a",
+      "duration_ms": 5520000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    }
+  ],
+  "items": [
+    {
+      "id": "f1",
+      "file": "audio/mara-volk-live-at-halle-9.m4a",
+      "title": "The long build",
+      "kind": "fragment",
+      "credits": [
+        {
+          "person": "mara-volk",
+          "role": "dj"
+        }
+      ],
+      "start_ms": 2460000,
+      "end_ms": 2850000
+    },
+    {
+      "id": "f2",
+      "file": "audio/desert-unit-live-in-the-garden.m4a",
+      "title": "Machines talking",
+      "kind": "fragment",
+      "credits": [
+        {
+          "person": "desert-unit",
+          "role": "live"
+        }
+      ],
+      "start_ms": 3720000,
+      "end_ms": 3960000
+    },
+    {
+      "id": "f3",
+      "file": "audio/mara-volk-live-at-halle-9.m4a",
+      "title": "Last record",
+      "kind": "fragment",
+      "credits": [
+        {
+          "person": "mara-volk",
+          "role": "dj"
+        }
+      ],
+      "start_ms": 7020000,
+      "end_ms": 7200000,
+      "notes": "Fade out early if the room is still dancing."
+    }
+  ],
+  "playback": {
+    "resume": "never",
+    "order": "sequential"
+  }
+}

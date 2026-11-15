@@ -1,0 +1,111 @@
+{
+  "etui": "1.0",
+  "id": "b6f1d2c3-9a8e-4f70-8b1c-2d3e4f5a6b7c",
+  "revision": 1,
+  "updated": "2026-10-18T13:40:00+02:00",
+  "kind": "playlist",
+  "title": "A short test collection",
+  "subtitle": "Two tones and a fragment",
+  "language": "en",
+  "artwork": "images/cover.png",
+  "curator": {
+    "name": "Example Curator"
+  },
+  "generator": {
+    "name": "hand-made example",
+    "version": "1"
+  },
+  "rights": {
+    "statement": "Generated test tones, dedicated to the public domain.",
+    "license": "CC0-1.0"
+  },
+  "people": [
+    {
+      "id": "tone-makers",
+      "name": "The Tone Makers",
+      "tagline": "Sine waves, no compromises."
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/opening.mp3",
+      "format": "mp3",
+      "codec": "mp3",
+      "sha256": "5d1b2be63678dafa24f506b2f0c31bd12d8927ddb6bfaa88e17b469101f8b7e7",
+      "bytes": 65245,
+      "duration_ms": 4000
+    },
+    {
+      "path": "audio/Café Nocturne.m4a",
+      "format": "m4a",
+      "codec": "aac",
+      "sha256": "9119c18cf27e84a5ecbaadd9400316648df9a03095cad7859a7ab2fa955d8d14",
+      "bytes": 37824,
+      "duration_ms": 3000
+    }
+  ],
+  "items": [
+    {
+      "id": "opening",
+      "file": "audio/opening.mp3",
+      "title": "Opening (440 Hz)",
+      "kind": "track",
+      "credits": [
+        {
+          "person": "tone-makers",
+          "role": "performer"
+        }
+      ],
+      "chapters": [
+        {
+          "start_ms": 0,
+          "title": "Part one"
+        },
+        {
+          "start_ms": 2000,
+          "title": "Part two",
+          "exact": true
+        }
+      ],
+      "highlights": [
+        {
+          "start_ms": 1000,
+          "end_ms": 3000,
+          "label": "The middle",
+          "evidence": {
+            "method": "curator"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "file": "audio/Café Nocturne.m4a",
+      "title": "Café Nocturne (660 Hz)",
+      "kind": "track",
+      "credits": [
+        {
+          "person": "tone-makers",
+          "role": "performer"
+        }
+      ]
+    },
+    {
+      "id": "fragment",
+      "file": "audio/opening.mp3",
+      "title": "The middle of the opening",
+      "kind": "fragment",
+      "start_ms": 1000,
+      "end_ms": 2500,
+      "credits": [
+        {
+          "person": "tone-makers",
+          "role": "performer"
+        }
+      ]
+    }
+  ],
+  "playback": {
+    "resume": "never"
+  }
+}

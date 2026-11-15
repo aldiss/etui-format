@@ -1,0 +1,344 @@
+{
+  "etui": "1.0",
+  "id": "8affed1f-f654-47d8-93d7-038854754a23",
+  "revision": 1,
+  "updated": "2026-11-07T21:30:00+01:00",
+  "kind": "rym_list",
+  "title": "Хип-хоп не на английском, раунд 1",
+  "subtitle": "Китай и Грузия",
+  "description": "Два альбома из списка, по одному на страну. Слова первой песни — с переводом на русский и английский.",
+  "language": "ru",
+  "translations": {
+    "en": {
+      "title": "Hip-hop not in English, round 1",
+      "subtitle": "China and Georgia",
+      "description": "Two albums from the list, one per country. The words of the first song come with Russian and English translations."
+    }
+  },
+  "artwork": "images/cover.jpg",
+  "curator": {
+    "name": "Example Curator"
+  },
+  "generator": {
+    "name": "example-rym-script",
+    "version": "2026.11"
+  },
+  "rym_list": {
+    "title": "Хип-хоп не на английском: по альбому на страну",
+    "url": "https://rateyourmusic.com/list/example_curator/hip-hop-not-in-english/",
+    "author": "example_curator",
+    "round": 1,
+    "translations": {
+      "en": {
+        "title": "Hip-hop not in English: one album per country"
+      }
+    }
+  },
+  "people": [
+    {
+      "id": "lao-dengpao",
+      "name": "Lao Dengpao",
+      "native_name": "老灯泡",
+      "pronunciation": "Лао Дэнпао",
+      "tagline": "Биты из уличной еды и старых кассет.",
+      "bio": {
+        "text": "Я вырос над закусочной, где отец жарил лапшу до трёх ночи. Первые биты я собрал из звуков его кухни: стук ножа, шипение масла, радио на подоконнике.\n\nПсевдоним — от лампочки над входом. Она горела, сколько я себя помню.",
+        "source": "Bandcamp",
+        "url": "https://example-lao-dengpao.bandcamp.com"
+      },
+      "facts": [
+        {
+          "text": "Записывает биты на четырёхдорожечный кассетный магнитофон.",
+          "source": "Discogs",
+          "url": "https://www.discogs.com/artist/0000002"
+        }
+      ],
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/artist/example-lao-dengpao"
+        },
+        {
+          "kind": "bandcamp",
+          "title": "Bandcamp",
+          "url": "https://example-lao-dengpao.bandcamp.com"
+        }
+      ],
+      "translations": {
+        "en": {
+          "pronunciation": "lao duhng-pao",
+          "tagline": "Beats made of street food and old tapes.",
+          "bio": "I grew up above a noodle stall where my father cooked until three in the morning. I built my first beats from the sounds of his kitchen: the knife, the hissing oil, the radio on the windowsill.\n\nThe name comes from the light bulb over the door. It was on for as long as I can remember.",
+          "facts": [
+            {
+              "text": "Records his beats on a four-track cassette recorder.",
+              "source": "Discogs",
+              "url": "https://www.discogs.com/artist/0000002"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "mtvaris-kuchebi",
+      "name": "Mtvaris Kuchebi",
+      "native_name": "მთვარის ქუჩები",
+      "pronunciation": "Мтварис Кучеби",
+      "tagline": "Трио из Тбилиси: три голоса и драм-машина.",
+      "bio": {
+        "text": "Мы пели в церковном хоре, пока не нашли в подвале старую драм-машину. Теперь поём то же многоголосие, только поверх бита.",
+        "source": "their website",
+        "url": "https://example.com/mtvaris-kuchebi"
+      },
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/artist/example-mtvaris-kuchebi"
+        },
+        {
+          "kind": "website",
+          "title": "Website",
+          "url": "https://example.com/mtvaris-kuchebi"
+        }
+      ],
+      "translations": {
+        "en": {
+          "pronunciation": "MTVAH-ris KOO-cheh-bee",
+          "tagline": "A trio from Tbilisi: three voices and a drum machine.",
+          "bio": {
+            "text": "We sang in a church choir until we found an old drum machine in a basement. Now we sing the same polyphony, only over a beat.",
+            "source": "their website",
+            "url": "https://example.com/mtvaris-kuchebi"
+          }
+        }
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "yeshi-huisheng",
+      "kind": "album",
+      "number": 1,
+      "title": "Yeshi huisheng",
+      "people": [
+        {
+          "person": "lao-dengpao",
+          "role": "performer"
+        }
+      ],
+      "artwork": "images/yeshi-huisheng.jpg",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/release/album/example-lao-dengpao/yeshi-huisheng/"
+        },
+        {
+          "kind": "bandcamp",
+          "title": "Bandcamp",
+          "url": "https://example-lao-dengpao.bandcamp.com/album/yeshi-huisheng"
+        }
+      ],
+      "album": {
+        "native_title": "夜市回声",
+        "title_meaning": "Эхо ночного рынка",
+        "year": 2019,
+        "country": "CN",
+        "language": "zh",
+        "hook": "Бум-бэп из звона сковородок и гудков скутеров",
+        "translations": {
+          "en": {
+            "title_meaning": "Echo of the Night Market",
+            "hook": "Boom bap made of clanging woks and scooter horns"
+          }
+        },
+        "extensions": {
+          "com.example.rym": {
+            "rating": 3.71,
+            "ratings": 412
+          }
+        }
+      },
+      "description": "Записан за одно лето, по ночам, на рынке под домом. Сэмплы — шум рынка, а не пластинки.",
+      "translations": {
+        "en": {
+          "description": "Recorded over one summer, at night, at the market below the flat. The samples are the market's noise, not records."
+        }
+      }
+    },
+    {
+      "id": "ghamis-tramvai",
+      "kind": "album",
+      "number": 2,
+      "title": "Ghamis tramvai",
+      "people": [
+        {
+          "person": "mtvaris-kuchebi",
+          "role": "performer"
+        }
+      ],
+      "artwork": "images/ghamis-tramvai.jpg",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/release/album/example-mtvaris-kuchebi/ghamis-tramvai/"
+        },
+        {
+          "kind": "discogs",
+          "title": "Discogs",
+          "url": "https://www.discogs.com/release/0000003"
+        }
+      ],
+      "album": {
+        "native_title": "ღამის ტრამვაი",
+        "title_meaning": "Ночной трамвай",
+        "year": 2016,
+        "country": "GE",
+        "language": "ka",
+        "hook": "Грузинское многоголосие поверх тяжёлого бита",
+        "translations": {
+          "en": {
+            "title_meaning": "The Night Tram",
+            "hook": "Georgian polyphony over a heavy beat"
+          }
+        }
+      },
+      "description": "Песни о последнем трамвае через город: от депо до конечной и обратно.",
+      "translations": {
+        "en": {
+          "description": "Songs about the last tram across the city: from the depot to the end of the line and back."
+        }
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/lao-dengpao-dengpao-liang-le.mp3",
+      "sha256": "fc338fdaa2d5e185342972c4da8e6e30a55c802e48ae8b221f1facddbb817f38",
+      "bytes": 8561280,
+      "format": "mp3",
+      "duration_ms": 214000,
+      "codec": "mp3",
+      "bitrate_kbps": 320
+    },
+    {
+      "path": "audio/lao-dengpao-yingbi.mp3",
+      "sha256": "3bf033f55b3a7378e4d1306a727efad1e9ef5125fbb45d03d4bd888cd9a65991",
+      "bytes": 7481280,
+      "format": "mp3",
+      "duration_ms": 187000,
+      "codec": "mp3",
+      "bitrate_kbps": 320
+    },
+    {
+      "path": "audio/mtvaris-kuchebi-depo.m4a",
+      "sha256": "20ba023c81ef727329511c68cb0b7ac0d35912794b732eb1f6486c6270b7f17e",
+      "bytes": 7716864,
+      "format": "m4a",
+      "duration_ms": 241000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    },
+    {
+      "path": "audio/mtvaris-kuchebi-bolo-gachereba.m4a",
+      "sha256": "cf1a02992648edc5f44477c374175f60094a1a56eb57a40f0a6dcf7eee3c87b6",
+      "bytes": 8389120,
+      "format": "m4a",
+      "duration_ms": 262000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    }
+  ],
+  "items": [
+    {
+      "id": "yeshi-huisheng-1",
+      "file": "audio/lao-dengpao-dengpao-liang-le.mp3",
+      "title": "Dengpao liang le",
+      "kind": "track",
+      "section": "yeshi-huisheng",
+      "credits": [
+        {
+          "person": "lao-dengpao",
+          "role": "performer"
+        }
+      ],
+      "lyrics": "lyrics/dengpao-liang-le.json",
+      "published": "2019-06-21",
+      "source": {
+        "service": "bandcamp",
+        "url": "https://example-lao-dengpao.bandcamp.com/track/dengpao-liang-le"
+      },
+      "notes": "Первая песня альбома: рынок открывается.",
+      "tags": [
+        "хип-хоп",
+        "бум-бэп"
+      ],
+      "translations": {
+        "en": {
+          "notes": "The album's first song: the market opens.",
+          "tags": [
+            "hip-hop",
+            "boom bap"
+          ]
+        }
+      }
+    },
+    {
+      "id": "yeshi-huisheng-2",
+      "file": "audio/lao-dengpao-yingbi.mp3",
+      "title": "Yingbi",
+      "kind": "track",
+      "section": "yeshi-huisheng",
+      "credits": [
+        {
+          "person": "lao-dengpao",
+          "role": "performer"
+        }
+      ],
+      "published": "2019-06-21"
+    },
+    {
+      "id": "ghamis-tramvai-1",
+      "file": "audio/mtvaris-kuchebi-depo.m4a",
+      "title": "Depo",
+      "kind": "track",
+      "section": "ghamis-tramvai",
+      "credits": [
+        {
+          "person": "mtvaris-kuchebi",
+          "role": "performer"
+        }
+      ],
+      "published": "2016-03-04"
+    },
+    {
+      "id": "ghamis-tramvai-2",
+      "file": "audio/mtvaris-kuchebi-bolo-gachereba.m4a",
+      "title": "Bolo gachereba",
+      "kind": "track",
+      "section": "ghamis-tramvai",
+      "credits": [
+        {
+          "person": "mtvaris-kuchebi",
+          "role": "performer"
+        }
+      ],
+      "published": "2016-03-04",
+      "tags": [
+        "хип-хоп",
+        "многоголосие"
+      ],
+      "translations": {
+        "en": {
+          "tags": [
+            "hip-hop",
+            "polyphony"
+          ]
+        }
+      }
+    }
+  ]
+}

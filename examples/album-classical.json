@@ -1,0 +1,176 @@
+{
+  "etui": "1.0",
+  "id": "a3d9e4b2-6c1f-4f8e-b0a7-9e2d5c4b3a10",
+  "revision": 1,
+  "updated": "2026-10-18T12:00:00+02:00",
+  "kind": "album",
+  "title": "Beethoven: Symphony No. 5",
+  "subtitle": "Example Philharmonic · Irene Halvorsen",
+  "language": "en",
+  "artwork": "images/cover.jpg",
+  "people": [
+    {
+      "id": "beethoven",
+      "name": "Ludwig van Beethoven",
+      "sort_name": "Beethoven, Ludwig van"
+    },
+    {
+      "id": "halvorsen",
+      "name": "Irene Halvorsen",
+      "sort_name": "Halvorsen, Irene"
+    },
+    {
+      "id": "example-phil",
+      "name": "Example Philharmonic"
+    }
+  ],
+  "sections": [
+    {
+      "id": "op67",
+      "kind": "work",
+      "title": "Symphony No. 5 in C minor, Op. 67",
+      "people": [
+        {
+          "person": "beethoven",
+          "role": "composer"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/symphony-5-1.m4a",
+      "sha256": "a45587873b53c62c645270bff5db5e22bf7412c8aed62ebc0e6b011d368dde08",
+      "bytes": 50625000,
+      "format": "m4a",
+      "duration_ms": 450000,
+      "codec": "alac",
+      "bitrate_kbps": 900
+    },
+    {
+      "path": "audio/symphony-5-2.m4a",
+      "sha256": "2c719c759359aa0d99476cfbc3ce3efbf50c2925ae192280b232aff448ec91db",
+      "bytes": 66352500,
+      "format": "m4a",
+      "duration_ms": 589800,
+      "codec": "alac",
+      "bitrate_kbps": 900
+    },
+    {
+      "path": "audio/symphony-5-3.m4a",
+      "sha256": "e6ba1ccd5fb4b9d968d9b9595271a4b203e2ab0337d45371b1f5aea44c73aa4c",
+      "bytes": 35977500,
+      "format": "m4a",
+      "duration_ms": 319800,
+      "codec": "alac",
+      "bitrate_kbps": 900
+    },
+    {
+      "path": "audio/symphony-5-4.m4a",
+      "sha256": "ecf78a7cdb21c17fc27d4ca30b8fe2d0c54e44af7bfb11f6f9517ddcba4f8264",
+      "bytes": 75397500,
+      "format": "m4a",
+      "duration_ms": 670200,
+      "codec": "alac",
+      "bitrate_kbps": 900
+    }
+  ],
+  "items": [
+    {
+      "id": "op67-1",
+      "file": "audio/symphony-5-1.m4a",
+      "title": "I. Allegro con brio",
+      "kind": "movement",
+      "section": "op67",
+      "credits": [
+        {
+          "person": "beethoven",
+          "role": "composer"
+        },
+        {
+          "person": "halvorsen",
+          "role": "conductor"
+        },
+        {
+          "person": "example-phil",
+          "role": "ensemble"
+        }
+      ],
+      "recorded": "2026-05-09"
+    },
+    {
+      "id": "op67-2",
+      "file": "audio/symphony-5-2.m4a",
+      "title": "II. Andante con moto",
+      "kind": "movement",
+      "section": "op67",
+      "credits": [
+        {
+          "person": "beethoven",
+          "role": "composer"
+        },
+        {
+          "person": "halvorsen",
+          "role": "conductor"
+        },
+        {
+          "person": "example-phil",
+          "role": "ensemble"
+        }
+      ],
+      "recorded": "2026-05-09"
+    },
+    {
+      "id": "op67-3",
+      "file": "audio/symphony-5-3.m4a",
+      "title": "III. Scherzo: Allegro",
+      "kind": "movement",
+      "section": "op67",
+      "credits": [
+        {
+          "person": "beethoven",
+          "role": "composer"
+        },
+        {
+          "person": "halvorsen",
+          "role": "conductor"
+        },
+        {
+          "person": "example-phil",
+          "role": "ensemble"
+        }
+      ],
+      "recorded": "2026-05-09"
+    },
+    {
+      "id": "op67-4",
+      "file": "audio/symphony-5-4.m4a",
+      "title": "IV. Allegro",
+      "kind": "movement",
+      "section": "op67",
+      "credits": [
+        {
+          "person": "beethoven",
+          "role": "composer"
+        },
+        {
+          "person": "halvorsen",
+          "role": "conductor"
+        },
+        {
+          "person": "example-phil",
+          "role": "ensemble"
+        }
+      ],
+      "recorded": "2026-05-09"
+    }
+  ],
+  "playback": {
+    "continuous": true,
+    "order": "sequential"
+  },
+  "rights": {
+    "statement": "The work is in the public domain; this recording is © 2026 Example Philharmonic.",
+    "license": "all-rights-reserved"
+  }
+}

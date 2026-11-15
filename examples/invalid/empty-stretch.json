@@ -1,0 +1,302 @@
+{
+  "etui": "1.0",
+  "id": "5f0c2a8e-3d4b-4e7a-9a51-2b9e8c1d7f30",
+  "revision": 2,
+  "updated": "2026-10-18T10:00:00+02:00",
+  "kind": "event",
+  "title": "Nightshift",
+  "subtitle": "Halle 9, Berlin",
+  "language": "en",
+  "artwork": "images/cover.jpg",
+  "curator": {
+    "name": "Example Curator",
+    "url": "https://example.com/curator"
+  },
+  "generator": {
+    "name": "example-pipeline",
+    "version": "2026.10"
+  },
+  "event": {
+    "title": "Nightshift",
+    "venue": "Halle 9",
+    "city": "Berlin",
+    "country": "DE",
+    "starts": "2026-10-17T23:59:00+02:00",
+    "ends": "2026-10-19T08:00:00+02:00",
+    "rooms": [
+      "Main",
+      "Garden"
+    ],
+    "url": "https://example.com/events/nightshift"
+  },
+  "people": [
+    {
+      "id": "mara-volk",
+      "name": "Mara Volk",
+      "sort_name": "Volk, Mara",
+      "tagline": "Hypnotic techno, long builds.",
+      "bio": {
+        "text": "I started playing records in a basement in Leipzig and never really left the basement.\n\nThese days I play long sets: the longer the night, the slower the build.",
+        "source": "SoundCloud",
+        "url": "https://soundcloud.com/example-mara-volk"
+      },
+      "facts": [
+        {
+          "text": "Resident DJ at an example club since 2019.",
+          "source": "Discogs",
+          "url": "https://www.discogs.com/artist/0000001"
+        }
+      ],
+      "links": [
+        {
+          "kind": "soundcloud",
+          "title": "SoundCloud",
+          "url": "https://soundcloud.com/example-mara-volk"
+        },
+        {
+          "kind": "bandcamp",
+          "title": "Bandcamp",
+          "url": "https://example-mara-volk.bandcamp.com"
+        },
+        {
+          "kind": "instagram",
+          "title": "Instagram",
+          "url": "https://www.instagram.com/example.mara.volk"
+        }
+      ],
+      "image": "images/mara-volk.jpg",
+      "dates_url": "https://ra.co/dj/example-mara-volk"
+    },
+    {
+      "id": "desert-unit",
+      "name": "Desert Unit",
+      "members": [
+        "lea-sand",
+        "omar-dune"
+      ],
+      "tagline": "A live duo: two machines, no laptop."
+    },
+    {
+      "id": "lea-sand",
+      "name": "Lea Sand"
+    },
+    {
+      "id": "omar-dune",
+      "name": "Omar Dune"
+    }
+  ],
+  "sections": [
+    {
+      "id": "slot-1",
+      "kind": "artist",
+      "number": 1,
+      "title": "Mara Volk",
+      "people": [
+        {
+          "person": "mara-volk",
+          "role": "dj"
+        }
+      ],
+      "room": "Main",
+      "starts": "2026-10-18T00:00:00+02:00"
+    },
+    {
+      "id": "slot-2",
+      "kind": "artist",
+      "number": 2,
+      "title": "Desert Unit",
+      "people": [
+        {
+          "person": "desert-unit",
+          "role": "live"
+        }
+      ],
+      "room": "Garden",
+      "starts": "2026-10-18T14:00:00+02:00"
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/mara-volk-live-at-halle-9.m4a",
+      "sha256": "84e45b48c385cbc1da9ddb91e5ebcdbb4e63514faf9bb0270b434ac4622b5f6b",
+      "bytes": 240000000,
+      "format": "m4a",
+      "duration_ms": 7500000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    },
+    {
+      "path": "audio/mara-volk-radio-mix.mp3",
+      "sha256": "bd2e80ee6878b97ce42222471ede72d039ea4f1e58357c5209630b71a3dca488",
+      "bytes": 113280000,
+      "format": "mp3",
+      "duration_ms": 3540000,
+      "codec": "mp3",
+      "bitrate_kbps": 256
+    },
+    {
+      "path": "audio/mara-volk-signal-path.mp3",
+      "sha256": "621b54446bcfda5640b2a8e37f36e813993d409eb488d2a6e17b77ae57d6531b",
+      "bytes": 15600000,
+      "format": "mp3",
+      "duration_ms": 390000,
+      "codec": "mp3",
+      "bitrate_kbps": 320
+    },
+    {
+      "path": "audio/desert-unit-live-in-the-garden.m4a",
+      "sha256": "2382b0b5f331b0b319ecdbebb39f8e4c5ef8d15f17a2a30b2815df6ee0cb3208",
+      "bytes": 176640000,
+      "format": "m4a",
+      "duration_ms": 5520000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    }
+  ],
+  "items": [
+    {
+      "id": "7d3f0c1e-2b8a-4c55-8e6f-1a2b3c4d5e01",
+      "file": "audio/mara-volk-live-at-halle-9.m4a",
+      "title": "Live at Halle 9",
+      "kind": "set",
+      "section": "slot-1",
+      "credits": [
+        {
+          "person": "mara-volk",
+          "role": "dj"
+        }
+      ],
+      "artwork": "images/mara-volk-live-at-halle-9.jpg",
+      "recorded": "2026-03-14",
+      "published": "2026-04-02",
+      "source": {
+        "service": "soundcloud",
+        "url": "https://soundcloud.com/example-mara-volk/live-at-halle-9",
+        "id": "1000000001",
+        "uploader": "Mara Volk",
+        "retrieved": "2026-10-17T21:04:00+02:00"
+      },
+      "chapters": [
+        {
+          "start_ms": 0,
+          "title": "Opening",
+          "artist": "Mara Volk",
+          "exact": false
+        },
+        {
+          "start_ms": 2490000,
+          "title": "Low Orbit",
+          "artist": "Example Artist",
+          "exact": false
+        },
+        {
+          "start_ms": 4925000,
+          "title": "Second Wind",
+          "artist": "Another Example",
+          "exact": true
+        }
+      ],
+      "highlights": [
+        {
+          "start_ms": 2712000,
+          "end_ms": 2832000,
+          "label": "Peak",
+          "evidence": {
+            "method": "listener_cluster",
+            "listeners": 14,
+            "confidence": 0.8
+          }
+        },
+        {
+          "start_ms": 7080000,
+          "end_ms": 7200000,
+          "label": "Closing track",
+          "evidence": {
+            "method": "single_listener",
+            "listeners": 1
+          }
+        }
+      ],
+      "tags": [
+        "techno",
+        "hypnotic"
+      ],
+      "start_ms": 60000,
+      "end_ms": 60000
+    },
+    {
+      "id": "7d3f0c1e-2b8a-4c55-8e6f-1a2b3c4d5e02",
+      "file": "audio/mara-volk-radio-mix.mp3",
+      "title": "Radio mix",
+      "kind": "set",
+      "section": "slot-1",
+      "credits": [
+        {
+          "person": "mara-volk",
+          "role": "dj"
+        }
+      ],
+      "published": "2025-11-20",
+      "source": {
+        "service": "mixcloud",
+        "url": "https://www.mixcloud.com/example-radio/mara-volk-radio-mix/",
+        "uploader": "Example Radio"
+      }
+    },
+    {
+      "id": "7d3f0c1e-2b8a-4c55-8e6f-1a2b3c4d5e03",
+      "file": "audio/mara-volk-signal-path.mp3",
+      "title": "Signal Path",
+      "kind": "track",
+      "section": "slot-1",
+      "credits": [
+        {
+          "person": "mara-volk",
+          "role": "producer"
+        }
+      ],
+      "published": "2024-06-07",
+      "source": {
+        "service": "bandcamp",
+        "url": "https://example-mara-volk.bandcamp.com/track/signal-path"
+      },
+      "rights": {
+        "statement": "Bought on Bandcamp for personal listening.",
+        "license": "all-rights-reserved"
+      }
+    },
+    {
+      "id": "7d3f0c1e-2b8a-4c55-8e6f-1a2b3c4d5e04",
+      "file": "audio/desert-unit-live-in-the-garden.m4a",
+      "title": "Live in the Garden",
+      "kind": "live",
+      "section": "slot-2",
+      "credits": [
+        {
+          "person": "desert-unit",
+          "role": "live"
+        }
+      ],
+      "recorded": "2026-10-18T14:00:00+02:00",
+      "highlights": [
+        {
+          "start_ms": 3820000,
+          "end_ms": 3940000,
+          "evidence": {
+            "method": "audio_fallback"
+          }
+        }
+      ]
+    }
+  ],
+  "playback": {
+    "resume": "always",
+    "skip_back_s": 10,
+    "skip_forward_s": 30
+  },
+  "extensions": {
+    "com.example.pipeline": {
+      "selection": "the longest set per artist over 60 minutes, plus favourite tracks"
+    }
+  }
+}
