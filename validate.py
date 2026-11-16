@@ -57,6 +57,7 @@ TRANSLATABLE = {
     "collection": {"title": "text", "subtitle": "text", "description": "long text"},
     "event": {"title": "text", "venue": "text", "city": "text"},
     "rym_list": {"title": "text", "author": "text"},
+    "series": {"title": "text", "part": "text"},
     "curator": {"name": "text"},
     "link": {"title": "text"},
     "person": {"name": "text", "sort_name": "text", "native_name": "text", "pronunciation": "text", "tagline": "text",
@@ -66,7 +67,8 @@ TRANSLATABLE = {
     "item": {"title": "text", "title_meaning": "text", "artist": "text", "notes": "long text", "reason": "text",
              "tags": "texts"},
 }
-NOUNS = {"collection": "collection", "event": "event", "rym_list": "rym_list object", "curator": "curator", "link": "link", "person": "person",
+NOUNS = {"collection": "collection", "event": "event", "rym_list": "rym_list object", "series": "series object", "curator": "curator",
+         "link": "link", "person": "person",
          "section": "section", "album": "album object", "item": "item"}
 AUDIO_EXT = {"mp3", "m4a", "m4b", "aac", "flac", "opus", "wav", "aiff", "aif"}  # §5.1; formats beyond MP3 and M4A since 2026-11-10
 IMAGE_EXT = {"jpg", "jpeg", "png"}
@@ -467,7 +469,7 @@ class Manifest(Checker):
             return
         self.known(m, "the manifest", {"etui", "id", "revision", "updated", "kind", "title", "subtitle", "description",
                                        "language", "translations", "artwork", "curator", "generator", "rights", "event",
-                                       "rym_list", "people", "sections", "files", "items", "playback", "extensions"})
+                                       "rym_list", "series", "people", "sections", "files", "items", "playback", "extensions"})
         version = self.field(m, "etui", "the manifest", lambda v: None if type(v) is str and VERSION_RE.fullmatch(v)
                              else "isn't a MAJOR.MINOR version", True)
         if version is not None:
@@ -508,6 +510,7 @@ class Manifest(Checker):
         self.extensions(m, "the manifest")
         self.check_event()
         self.check_rym_list()
+        self.check_series()
         self.check_people()
         self.check_sections()
         self.check_files()
@@ -562,6 +565,22 @@ class Manifest(Checker):
             else:
                 rooms.add(room)
         return rooms
+
+    def check_series(self):
+        """§3.5: the series the collection belongs to, by its id, with its title and this collection's part."""
+        if "series" not in self.m:
+            return
+        s = self.m["series"]
+        if type(s) is not dict:
+            self.rep.err(1, "series isn't an object")
+            return
+        self.known(s, "series", {"id", "title", "part", "translations", "extensions"})
+        self.field(s, "id", "series", lambda v: None if type(v) is str and UUID_RE.fullmatch(v)
+                   else "isn't a lowercase version-4 or version-5 UUID", True)
+        self.field(s, "title", "series", self.text(), True)
+        self.field(s, "part", "series", self.text())
+        self.translations(s, "series", "series")
+        self.extensions(s, "series")
 
     def check_rym_list(self):
         if "rym_list" not in self.m:

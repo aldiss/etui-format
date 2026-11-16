@@ -120,6 +120,7 @@ Readers ignore files the manifest doesn't name, such as a downloader's `*.info.j
 | `rights` | object | no | §11 |
 | `event` | object | no | For a live event (§3.2) |
 | `rym_list` | object | no | For albums picked from a RateYourMusic list or chart (§3.3) |
+| `series` | object | no | The series it belongs to, such as a weekend's nights (§3.5) |
 | `people` | array | no | Everyone credited (§4) |
 | `sections` | array | no | Groups of items (§5.2) |
 | `files` | array, at least 1 | yes | The audio files (§5.1) |
@@ -196,7 +197,7 @@ The `rym_list` object says where the albums came from:
 
 ### 3.4 Languages
 
-A collection's text is written in its `language`. The same text in other languages goes in `translations`. The collection, `event`, `rym_list`, `curator`, a person, a link, a section, an `album` object and an item may each carry one:
+A collection's text is written in its `language`. The same text in other languages goes in `translations`. The collection, `event`, `rym_list`, `series`, `curator`, a person, a link, a section, an `album` object and an item may each carry one:
 
 ```json
 "translations": {
@@ -209,6 +210,22 @@ A collection's text is written in its `language`. The same text in other languag
 - **What stays as it is:** ids, paths, numbers, addresses and nested objects. An `album` object, a link and `curator` carry their own `translations`. References aren't translated either: a section's `room` and the event's `rooms` keep the names that sections refer to. Other objects aren't translated in this version: chapters, highlights, links, `curator`, `generator` and a lyrics file's `source`.
 - **Readers** show the language the listener chose. Otherwise they show the first of the listener's preferred languages that the collection has, and otherwise the original text. A field missing from a translation falls back to the original, except `title_meaning`: it is written for the readers of one language, so a reader showing another language without one shows none. A reader MAY show the original next to the translation, and MAY offer a choice among the collection's languages: its `language` and every key used in `translations`.
 - **Lyrics** carry their own translations, line by line (§5.7).
+
+### 3.5 Series
+
+A collection can be one of a series: a weekend's nights, the rounds of a list. The series itself is described apart, by whoever publishes it, beside the collections it names. A collection carries only a pointer to it, so that a file which arrives alone can be shown under its series' name, and joins the others when they come.
+
+| Field | Type | What it is |
+|---|---|---|
+| `id` | UUID | The series' identity; required |
+| `title` | text | Its name: "Amsterdam weekend"; required |
+| `part` | text | This collection's part of it: "Friday 20 Nov", "Round 2" |
+| `translations` | object | `title` and `part` in other languages (§3.4) |
+| `extensions` | object | §10.2 |
+
+- **One series:** a collection names at most one.
+- **What a reader does:** it shows the collection under its series' title, beside the other collections that name the same id, in the order of their parts. A reader that knows more about the series, such as its pictures or its other members, may show that instead.
+- **Revisions:** moving a collection to another series is a change to the collection, so it is a new revision (§7). A series that gains a member needs no change to the collections already in it.
 
 ## 4. People
 
