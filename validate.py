@@ -43,7 +43,7 @@ MAX_LYRICS = 1024 * 1024
 MAX_LINES = 4096
 MIMETYPE = b"application/vnd.etui+zip"
 
-KINDS = {"playlist", "event", "album", "audiobook", "course", "fragments", "rym_list"}
+KINDS = {"playlist", "event", "album", "audiobook", "course", "fragments", "rym_list", "mixtape"}
 SECTION_KINDS = {"artist", "album", "work", "part", "other"}
 ITEM_KINDS = {"set", "live", "track", "movement", "chapter", "episode", "fragment", "other"}
 ROLES = {"dj", "live", "performer", "composer", "conductor", "ensemble", "soloist", "narrator", "author", "host",

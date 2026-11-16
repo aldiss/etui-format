@@ -162,6 +162,7 @@ An object this spec defines may carry fields it doesn't define; readers ignore t
 | `course` | Lectures, talks, a season of a podcast |
 | `fragments` | Short stretches taken from longer recordings |
 | `rym_list` | Whole albums picked from a RateYourMusic list or chart, each a section of kind `album` (§3.3) |
+| `mixtape` | A selection someone made by hand from other collections: stretches and whole items |
 
 ### 3.2 Event
 
@@ -487,6 +488,7 @@ An unknown value is read as the default. The defaults by kind are informative, n
 | course | always | no | 15 / 30 s | yes |
 | fragments | never | no | 10 / 30 s | no |
 | rym_list | never | within a section | 10 / 30 s | no |
+| mixtape | never | no | 10 / 30 s | no |
 
 ## 9. Validity and what readers do
 
