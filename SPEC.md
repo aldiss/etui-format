@@ -440,6 +440,7 @@ An item's words are in a file of their own, named by the item's `lyrics`. The fi
 - **Not a validity failure:** an image that's missing, too large or not JPEG or PNG is ignored and reported. It doesn't make the collection invalid.
 - **The collection's `artwork`** SHOULD be square and at least 1,000 × 1,000 pixels.
 - **Fallback:** an item without `artwork` shows its section's `artwork`, then its file's embedded cover if the reader uses embedded covers, and otherwise the collection's `artwork`.
+  - An item in a section of kind `album` stops before the collection's `artwork`. Readers SHOULD show their own placeholder there: the collection's cover may be another album's sleeve or a mosaic of several, and either names the wrong record.
 - **Metadata:** producers SHOULD strip EXIF, XMP and IPTC data, which can carry places and names. Readers MUST NOT display it.
 
 ## 7. Identity and updates
