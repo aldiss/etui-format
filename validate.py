@@ -43,7 +43,7 @@ MAX_LYRICS = 1024 * 1024
 MAX_LINES = 4096
 MIMETYPE = b"application/vnd.etui+zip"
 
-KINDS = {"playlist", "event", "album", "audiobook", "course", "fragments", "rym_list", "mixtape"}
+KINDS = {"playlist", "event", "album", "audiobook", "course", "fragments", "rym_list", "mixtape", "song_list"}
 SECTION_KINDS = {"artist", "album", "work", "part", "other"}
 ITEM_KINDS = {"set", "live", "track", "movement", "chapter", "episode", "fragment", "other"}
 ROLES = {"dj", "live", "performer", "composer", "conductor", "ensemble", "soloist", "narrator", "author", "host",
@@ -729,7 +729,7 @@ class Manifest(Checker):
         for i, s in self.objects(self.m, "sections", "the manifest"):
             w = f"sections[{i}]"
             self.known(s, w, {"id", "title", "kind", "number", "people", "room", "starts", "artwork", "links", "album",
-                              "reason", "translations", "description", "extensions"})
+                              "source", "reason", "translations", "description", "extensions"})
             key = self.unique_key(s, w, seen, "section")
             if key is not None:
                 self.sections[key] = s
@@ -747,6 +747,7 @@ class Manifest(Checker):
             self.image(s, "artwork", w)
             self.links(s, w)
             self.check_album(s, w)
+            self.check_source(s, w)
             self.field(s, "reason", w, self.text())
             self.translations(s, w, "section")
             self.field(s, "description", w, self.text(long=True))
@@ -772,8 +773,22 @@ class Manifest(Checker):
         self.translations(a, aw, "album")
         self.extensions(a, aw)
 
+    def check_source(self, obj, w):
+        """§5.4: where an item's audio came from, or where the whole of what a section heads can be heard (§5.2)."""
+        if "source" not in obj:
+            return
+        src, sw = obj["source"], f"{w}.source"
+        if type(src) is not dict:
+            self.rep.err(1, f"{sw} isn't an object")
+            return
+        self.known(src, sw, {"service", "url", "id", "uploader", "retrieved"})
+        for name in ("service", "id", "uploader"):
+            self.field(src, name, sw, self.text())
+        self.field(src, "url", sw, url_problem)
+        self.field(src, "retrieved", sw, timestamp_problem)
+
     def check_rating(self, a, w):
-        """§5.2.1: how listeners rate the album on a site."""
+        """§5.2.1: how listeners rate an album, or an item (§5.3), on a site."""
         if "rating" not in a:
             return
         r, rw = a["rating"], f"{w}.rating"
@@ -870,8 +885,8 @@ class Manifest(Checker):
         for i, it in items:
             w = f"items[{i}]"
             self.known(it, w, {"id", "file", "title", "title_meaning", "kind", "section", "credits", "artist", "start_ms", "end_ms", "disc",
-                               "artwork", "lyrics", "recorded", "published", "source", "chapters", "highlights", "notes",
-                               "reason", "tags", "translations", "rights", "extensions"})
+                               "artwork", "lyrics", "recorded", "published", "source", "links", "rating", "chapters",
+                               "highlights", "notes", "reason", "tags", "translations", "rights", "extensions"})
             self.unique_key(it, w, seen, "item")
             path = self.field(it, "file", w, path_problem, True)
             file = None
@@ -905,16 +920,9 @@ class Manifest(Checker):
             self.field(it, "recorded", w, lambda v: None if date_problem(v) is None or timestamp_problem(v) is None
                        else "isn't a date or an RFC 3339 date-time")
             self.field(it, "published", w, date_problem)
-            if "source" in it:
-                src, sw = it["source"], f"{w}.source"
-                if type(src) is not dict:
-                    self.rep.err(1, f"{sw} isn't an object")
-                else:
-                    self.known(src, sw, {"service", "url", "id", "uploader", "retrieved"})
-                    for name in ("service", "id", "uploader"):
-                        self.field(src, name, sw, self.text())
-                    self.field(src, "url", sw, url_problem)
-                    self.field(src, "retrieved", sw, timestamp_problem)
+            self.check_source(it, w)
+            self.links(it, w)
+            self.check_rating(it, w)
             self.check_chapters(it, w, s, e)
             self.check_highlights(it, w, s, e)
             self.field(it, "notes", w, self.text(long=True))

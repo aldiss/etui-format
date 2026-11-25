@@ -70,7 +70,7 @@ my-collection/
 - `id`: a new random UUID, lowercase (`uuidgen | tr A-Z a-z`). Keep it for every later version of the same collection.
 - `revision`: `1`. Each new version you publish takes the next number (§7).
 - `updated`: an RFC 3339 time with seconds and an offset.
-- `kind` (§3.1): `playlist` (the default), `event`, `album`, `audiobook`, `course`, `fragments` or `rym_list`. An event, an album or a list has its own object and sections: read §3.2, §3.3 and §5.2 first.
+- `kind` (§3.1): `playlist` (the default), `event`, `album`, `audiobook`, `course`, `fragments`, `rym_list`, `mixtape` or `song_list`. An event, an album or a list has its own object and sections: read §3.2, §3.3, §3.6 and §5.2 first.
 - Items play in array order. Each item names one file; a fragment adds `start_ms` and `end_ms` (§5.3).
 - Credits: list people once in `people` and refer to them from items with a role, or give an item an `artist` line (§4, §5.3). When all you have is a tag's artist, use the `artist` line: a role you'd have to guess is better left out.
 - `generator` names the program that wrote the file, if you want to; it is optional.
@@ -169,4 +169,4 @@ The format grants no rights (§11). Whoever makes or shares a collection answers
 
 - `SPEC.md`: the Etui format, version 1.0 (draft 3).
 - `validate.py`: the checker, standard library only.
-- `examples/`: a minimal manifest, an event, an album, an audiobook, fragments, a RateYourMusic round, a complete archive, and invalid cases with what makes each one invalid.
+- `examples/`: a minimal manifest, an event, an album, an audiobook, fragments, a RateYourMusic round, a song list, a complete archive, and invalid cases with what makes each one invalid.

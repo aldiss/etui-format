@@ -1,0 +1,409 @@
+{
+  "etui": "1.0",
+  "id": "9a917787-9b4b-49b0-83e4-c7765891819f",
+  "revision": 1,
+  "updated": "2026-11-17T10:30:00+01:00",
+  "kind": "song_list",
+  "title": "Поезда, песня за песней",
+  "subtitle": "Три песни с трёх альбомов",
+  "description": "Песни, в которых поезд — не декорация, а то, о чём песня: ожидание, отъезд, дорога через ночь. По одной песне с альбома, в том порядке, в каком едет поезд: с перрона в ночь и к утру.",
+  "language": "ru",
+  "translations": {
+    "en": {
+      "title": "Trains, song by song",
+      "subtitle": "Three songs from three albums",
+      "description": "Songs in which the train isn't the scenery but what the song is about: waiting, leaving, the road through the night. One song from each album, in the order the train goes: from the platform into the night and on to the morning."
+    }
+  },
+  "artwork": "images/cover.jpg",
+  "curator": {
+    "name": "Составитель",
+    "translations": {
+      "en": {
+        "name": "Example Curator"
+      }
+    }
+  },
+  "generator": {
+    "name": "example-rym-script",
+    "version": "2026.11"
+  },
+  "rym_list": {
+    "title": "Songs about trains, one per album",
+    "url": "https://rateyourmusic.com/list/example_curator/songs-about-trains/",
+    "author": "example_curator"
+  },
+  "people": [
+    {
+      "id": "lena-varga",
+      "name": "Lena Varga",
+      "pronunciation": "Лена Варга",
+      "tagline": "Поёт под гитару и стук колёс.",
+      "bio": {
+        "text": "Я выросла у сортировочной станции. Ночью составы шли под окнами, и я засыпала под этот ритм. Мои песни до сих пор держат его темп.",
+        "source": "their website",
+        "url": "https://example.com/lena-varga"
+      },
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/artist/example-lena-varga"
+        }
+      ],
+      "translations": {
+        "en": {
+          "pronunciation": "LEH-nah VAR-gah",
+          "tagline": "Sings to a guitar and the clatter of wheels.",
+          "bio": {
+            "text": "I grew up by a marshalling yard. At night the trains ran under the windows, and I fell asleep to their rhythm. My songs still keep its tempo.",
+            "source": "their website",
+            "url": "https://example.com/lena-varga"
+          }
+        }
+      }
+    },
+    {
+      "id": "kaze-no-eki",
+      "name": "Kaze no Eki",
+      "native_name": "風の駅",
+      "pronunciation": "Кадзэ но Эки",
+      "tagline": "Дуэт из Саппоро: синтезатор и кото.",
+      "bio": {
+        "text": "Мы познакомились на последней электричке. Название — станция, которой нет на картах: туда приходит только ветер.",
+        "source": "Bandcamp",
+        "url": "https://example-kaze-no-eki.bandcamp.com"
+      },
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/artist/example-kaze-no-eki"
+        }
+      ],
+      "translations": {
+        "en": {
+          "pronunciation": "KAH-zeh noh EH-kee",
+          "tagline": "A duo from Sapporo: a synthesizer and a koto.",
+          "bio": {
+            "text": "We met on the last train of the night. The name is a station that isn't on any map: only the wind arrives there.",
+            "source": "Bandcamp",
+            "url": "https://example-kaze-no-eki.bandcamp.com"
+          }
+        }
+      }
+    },
+    {
+      "id": "os-ferroviarios",
+      "name": "Os Ferroviários",
+      "pronunciation": "Ус Ферровиариус",
+      "tagline": "Самба-кавакинью из рабочих кварталов у депо.",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/artist/example-os-ferroviarios"
+        }
+      ],
+      "translations": {
+        "en": {
+          "pronunciation": "oos feh-hoh-vee-AH-ree-oos",
+          "tagline": "Samba with cavaquinho from the workers' streets by the depot."
+        }
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "perron",
+      "kind": "album",
+      "title": "Perron",
+      "people": [
+        {
+          "person": "lena-varga",
+          "role": "performer"
+        }
+      ],
+      "artwork": "images/perron.jpg",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "Страница альбома на RateYourMusic",
+          "url": "https://rateyourmusic.com/release/album/example-lena-varga/perron/",
+          "translations": {
+            "en": {
+              "title": "The album's page on RateYourMusic"
+            }
+          }
+        }
+      ],
+      "album": {
+        "title_meaning": "Перрон",
+        "year": 2014,
+        "country": "HU",
+        "language": "hu",
+        "hook": "Тихий фолк, записанный в зале ожидания",
+        "rating": {
+          "source": "RateYourMusic",
+          "value": 3.64,
+          "best": 5,
+          "ratings": 288,
+          "reviews": 6,
+          "retrieved": "2026-11-17"
+        },
+        "translations": {
+          "en": {
+            "title_meaning": "Platform",
+            "hook": "Quiet folk recorded in a waiting room"
+          }
+        }
+      },
+      "source": "example-library:d16bb75ee5204ff1a44e998a22d01ef9"
+    },
+    {
+      "id": "yoru-no-sen",
+      "kind": "album",
+      "title": "Yoru no sen",
+      "people": [
+        {
+          "person": "kaze-no-eki",
+          "role": "performer"
+        }
+      ],
+      "artwork": "images/yoru-no-sen.jpg",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/release/album/example-kaze-no-eki/yoru-no-sen/"
+        }
+      ],
+      "album": {
+        "native_title": "夜の線",
+        "title_meaning": "Ночная линия",
+        "year": 2021,
+        "country": "JP",
+        "language": "ja",
+        "hook": "Кото поверх гула вагона",
+        "rating": {
+          "source": "RateYourMusic",
+          "value": 3.82,
+          "best": 5,
+          "ratings": 517,
+          "reviews": 11,
+          "retrieved": "2026-11-17"
+        },
+        "translations": {
+          "en": {
+            "title_meaning": "The Night Line",
+            "hook": "A koto over the hum of the carriage"
+          }
+        }
+      }
+    },
+    {
+      "id": "estacao-final",
+      "kind": "album",
+      "title": "Estação final",
+      "people": [
+        {
+          "person": "os-ferroviarios",
+          "role": "performer"
+        }
+      ],
+      "artwork": "images/estacao-final.jpg",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/release/album/example-os-ferroviarios/estacao-final/"
+        }
+      ],
+      "album": {
+        "title_meaning": "Конечная станция",
+        "year": 1978,
+        "country": "BR",
+        "language": "pt",
+        "hook": "Самба для тех, кто едет на смену",
+        "translations": {
+          "en": {
+            "title_meaning": "The Last Station",
+            "hook": "Samba for those riding to their shift"
+          }
+        }
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "audio/lena-varga-varakozas.m4a",
+      "sha256": "0cd70904371043baae1b3e4fa4908f04ff293d6b37a2a761f3d452ed973c3388",
+      "bytes": 6823104,
+      "format": "m4a",
+      "duration_ms": 213000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    },
+    {
+      "path": "audio/kaze-no-eki-shuden.m4a",
+      "sha256": "01c3c8e3e6c8ca4616c1d7acd41685532e28f8c285d934955cf32f0ff3ee2993",
+      "bytes": 8642560,
+      "format": "m4a",
+      "duration_ms": 270000,
+      "codec": "aac",
+      "bitrate_kbps": 256
+    },
+    {
+      "path": "audio/os-ferroviarios-trem-das-seis.mp3",
+      "sha256": "7b97b8d114040ed4a2acf91d908795dc4fb5fad98c0281a66ce1da5c3bda2834",
+      "bytes": 7296000,
+      "format": "mp3",
+      "duration_ms": 182000,
+      "codec": "mp3",
+      "bitrate_kbps": 320
+    }
+  ],
+  "items": [
+    {
+      "id": "varakozas",
+      "file": "audio/lena-varga-varakozas.m4a",
+      "title": "Várakozás",
+      "title_meaning": "Ожидание",
+      "kind": "track",
+      "section": "perron",
+      "credits": [
+        {
+          "person": "lena-varga",
+          "role": "performer"
+        }
+      ],
+      "published": "2014-04-11",
+      "source": {
+        "service": "example-library",
+        "id": "ed6b14eb3c104373865918933494d2db",
+        "retrieved": "2026-11-17T10:00:00+01:00"
+      },
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "Страница песни на RateYourMusic",
+          "url": "https://rateyourmusic.com/song/example-lena-varga/varakozas/",
+          "translations": {
+            "en": {
+              "title": "The song's page on RateYourMusic"
+            }
+          }
+        },
+        {
+          "kind": "other",
+          "title": "Интервью о записи альбома, 2014",
+          "url": "https://example.com/interviews/lena-varga-2014",
+          "translations": {
+            "en": {
+              "title": "An interview about recording the album, 2014"
+            }
+          }
+        }
+      ],
+      "rating": {
+        "source": "RateYourMusic",
+        "value": 3.71,
+        "best": 5,
+        "ratings": 96,
+        "retrieved": "2026-11-17"
+      },
+      "notes": "Женщина ждёт на перроне поезд, который всё время опаздывает, и перестаёт понимать, ждёт ли она его или того, кто в нём едет. Песню записали ночью в настоящем зале ожидания, и объявления диктора остались в записи.",
+      "reason": "Открывает список: поезд ещё не пришёл.",
+      "tags": [
+        "фолк",
+        "камерная песня"
+      ],
+      "translations": {
+        "en": {
+          "title_meaning": "Waiting",
+          "notes": "A woman waits on a platform for a train that keeps running late, and stops being sure whether she is waiting for it or for the person on it. The song was recorded at night in a real waiting room, and the announcer's calls stayed in the recording.",
+          "reason": "It opens the list: the train hasn't come yet.",
+          "tags": [
+            "folk",
+            "chamber song"
+          ]
+        }
+      }
+    },
+    {
+      "id": "shuden",
+      "file": "audio/kaze-no-eki-shuden.m4a",
+      "title": "Shūden",
+      "title_meaning": "Последняя электричка",
+      "kind": "track",
+      "section": "yoru-no-sen",
+      "credits": [
+        {
+          "person": "kaze-no-eki",
+          "role": "performer"
+        }
+      ],
+      "published": "2021-09-01",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/song/example-kaze-no-eki/shuden/"
+        }
+      ],
+      "rating": {
+        "source": "RateYourMusic",
+        "value": 3.9,
+        "best": 5,
+        "ratings": 143,
+        "retrieved": "2026-11-17"
+      },
+      "notes": "О последней электричке из центра, в которой каждый едет один, хотя вагон полон. Кото играет то, о чём пассажиры молчат, а синтезатор держит гул колёс до самого конца.",
+      "reason": "Ночь: поезд в пути, и в нём тихо.",
+      "translations": {
+        "en": {
+          "title_meaning": "The Last Train",
+          "notes": "About the last train out of the city centre, where everyone rides alone though the carriage is full. The koto plays what the passengers keep to themselves, and the synthesizer holds the hum of the wheels to the very end.",
+          "reason": "Night: the train is on its way, and it is quiet inside."
+        }
+      }
+    },
+    {
+      "id": "trem-das-seis",
+      "file": "audio/os-ferroviarios-trem-das-seis.mp3",
+      "title": "Trem das seis",
+      "title_meaning": "Поезд в шесть",
+      "kind": "track",
+      "section": "estacao-final",
+      "credits": [
+        {
+          "person": "os-ferroviarios",
+          "role": "performer"
+        }
+      ],
+      "published": "1978-02-03",
+      "links": [
+        {
+          "kind": "rateyourmusic",
+          "title": "RateYourMusic",
+          "url": "https://rateyourmusic.com/song/example-os-ferroviarios/trem-das-seis/"
+        }
+      ],
+      "notes": "Утренний поезд везёт рабочих на смену, и вагон поёт хором, чтобы не уснуть. Песня написана от имени машиниста, который знает каждого пассажира по голосу.",
+      "reason": "Утро: поезд приходит, и список кончается.",
+      "tags": [
+        "самба"
+      ],
+      "translations": {
+        "en": {
+          "title_meaning": "The Six O'Clock Train",
+          "notes": "The morning train takes the workers to their shift, and the carriage sings together so as not to fall asleep. The song is told by the driver, who knows every passenger by their voice.",
+          "reason": "Morning: the train arrives, and the list ends.",
+          "tags": [
+            "samba"
+          ]
+        }
+      }
+    }
+  ]
+}

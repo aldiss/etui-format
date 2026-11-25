@@ -119,7 +119,7 @@ Readers ignore files the manifest doesn't name, such as a downloader's `*.info.j
 | `generator` | object | no | What made the file: `name` (text, required), `version` (text) |
 | `rights` | object | no | §11 |
 | `event` | object | no | For a live event (§3.2) |
-| `rym_list` | object | no | For albums picked from a RateYourMusic list or chart (§3.3) |
+| `rym_list` | object | no | For albums or songs picked from a RateYourMusic list or chart (§3.3, §3.6) |
 | `series` | object | no | The series it belongs to, such as a weekend's nights (§3.5) |
 | `people` | array | no | Everyone credited (§4) |
 | `sections` | array | no | Groups of items (§5.2) |
@@ -163,6 +163,7 @@ An object this spec defines may carry fields it doesn't define; readers ignore t
 | `fragments` | Short stretches taken from longer recordings |
 | `rym_list` | Whole albums picked from a RateYourMusic list or chart, each a section of kind `album` (§3.3) |
 | `mixtape` | A selection someone made by hand from other collections: stretches and whole items |
+| `song_list` | Songs picked by one principle, each usually from a different album, heard in order; each sits in its album's section (§3.6) |
 
 ### 3.2 Event
 
@@ -196,6 +197,8 @@ The `rym_list` object says where the albums came from:
 | `translations` | object | §3.4 |
 | `extensions` | object | §10.2 |
 
+A song list (§3.6) MAY carry the same object, to say where its songs were found.
+
 ### 3.4 Languages
 
 A collection's text is written in its `language`. The same text in other languages goes in `translations`. The collection, `event`, `rym_list`, `series`, `curator`, a person, a link, a section, an `album` object and an item may each carry one:
@@ -227,6 +230,24 @@ A collection can be one of a series: a weekend's nights, the rounds of a list. T
 - **One series:** a collection names at most one.
 - **What a reader does:** it shows the collection under its series' title, beside the other collections that name the same id, in the order of their parts. A reader that knows more about the series, such as its pictures or its other members, may show that instead.
 - **Revisions:** moving a collection to another series is a change to the collection, so it is a new revision (§7). A series that gains a member needs no change to the collections already in it.
+
+### 3.6 Song list
+
+For `kind: "song_list"`: songs picked by one principle, such as a theme, a scene or someone's list, and heard in order. Each usually comes from a different album. Where a `rym_list` is made of whole albums (§3.3), a song list is made of songs, and each song comes with what it is about. The collection is made of:
+- **the principle:** the collection's `description`, with its `translations` (§3.4): why these songs go together;
+- **songs:** items of kind `track`, in the order they play. Beyond its title and file, a song has:
+  - `title_meaning` when its title is in another language (§5.3);
+  - `credits` with the role `performer`, naming people (§4) who carry the artists' names in their own script, how to say them, and their stories, as in a RateYourMusic round;
+  - `notes`: what the song is about, two to four sentences in the producer's own words, never quoting its lyrics;
+  - `reason`: why it is here (§5.3);
+  - `links` and `rating` (§5.3): its own page on a site such as RateYourMusic, its figures there, and where its notes came from;
+  - `source` (§5.4) and `tags`;
+  - `lyrics` (§5.7), only where whoever makes the collection may include the words (§11);
+- **albums:** each song sits in a section of kind `album` (§5.2.1) for the album it comes from, with the album's title, its `album` object, `artwork` (the sleeve), `links` and `people` (its artists). Usually a section holds one song; songs of one album that sit next to each other MAY share a section. The section's `source` says where the whole album can be heard (§5.2, §5.4).
+
+A song list MAY carry the `rym_list` object (§3.3), for where its songs were found.
+
+**What a reader does:** it plays the songs in order, one at a time, and shows each with its album's cover, its title, the artist, the album and its year, and what it is about. A song's own page adds why it is here, its rating, its links and its album, with the way to the whole album when the section has a `source` the reader knows. A reader that doesn't know the kind reads it as `playlist` (§3.1), and plays the songs in order under their albums' headings.
 
 ## 4. People
 
@@ -312,6 +333,7 @@ The manifest keeps three things apart:
 | `artwork` | path | no | The section's own cover, e.g. an album's sleeve (§6) |
 | `links` | array of links | no | Pages about it, e.g. an album's page at a shop, a label or an encyclopedia (§4) |
 | `album` | object | no | For a section of kind `album`: its details (§5.2.1) |
+| `source` | object | no | Where the whole of it can be heard, such as the album in a music library (§5.4) |
 | `reason` | text | no | Why it is in this collection, for the listener (§5.3) |
 | `translations` | object | no | §3.4 |
 | `description` | long text | no | |
@@ -319,6 +341,7 @@ The manifest keeps three things apart:
 
 - **Order:** a section's items MUST be next to each other in `items`, and sections MUST be listed in the order their first items appear. A section that no item uses is shown after the others, in array order, or not at all.
 - **One level:** sections don't nest in 1.0. An album's discs go in `items[].disc`; an event's days and rooms come from `starts` and `room`.
+- **Source:** a section's `source` (§5.4) says where the whole of what it heads can be heard, such as the album a song list's song comes from (§3.6). The items' own audio is still in the collection.
 
 #### 5.2.1 Album
 
@@ -359,6 +382,8 @@ What a section of kind `album` can say about its release:
 | `recorded` | date or timestamp | no | When it was performed or recorded |
 | `published` | date | no | When it was first published |
 | `source` | object | no | Where it came from (§5.4) |
+| `links` | array of links | no | Pages about it: its own page on a site, where its notes came from, further reading (§4) |
+| `rating` | object | no | How listeners rate it on a site, read from its page there (§5.2.1) |
 | `chapters` | array | no | §5.5 |
 | `highlights` | array | no | §5.6 |
 | `notes` | long text | no | |
@@ -374,10 +399,13 @@ What a section of kind `album` can say about its release:
 - **Credit:** `{"person": key, "role": string}`. Both are required, and an unknown role is read as `other`. The roles in 1.0 are `dj`, `live`, `performer`, `composer`, `conductor`, `ensemble`, `soloist`, `narrator`, `author`, `host`, `guest`, `remixer`, `producer` and `other`.
 - **Credits and sections:** an item's `credits` describe that item. A section's `people` describe only its heading. A reader shows an item's credits when it has them, and doesn't add the section's to them.
 - **Reason,** on an item or a section: one or two sentences, for the listener, on why this pick is in this collection, such as "The longest set of the last two years on their own profile" or "On ten of the folk lists, beside albums you rate 9". What the music is like stays in an album's `hook` and in `description`. A RateYourMusic round gives it on the album's section, an event on the set's item and, where the act itself needs one, on the act's section. Readers show it as written, in the listener's language through `translations` (§3.4). A reader that doesn't know it ignores it.
+- **Links and rating,** on any item: its own pages, and its own figures on a site, as a section of kind `album` has its album's (§5.2.1). The rating is the object of §5.2.1, a snapshot as there, and the page it was read from is one of the item's links. A song list's songs carry them (§3.6).
 
 ### 5.4 Source
 
 Where the audio came from, for credit and to find it again: `{"service": text, "url": url, "id": text, "uploader": text, "retrieved": timestamp}`. Every field is optional. `service` is free text, e.g. `soundcloud`, `mixcloud`, `bandcamp`, `archive.org`, `cd`, `own-recording`.
+- **On an item** it says where that item's audio came from; **on a section** (§5.2), where the whole of what the section heads can be heard, such as a whole album.
+- **A library's own ids:** a service that serves its listeners from one library, such as a music server they sign in to, names a track or an album by its `id` there, without a `url`. The id means something only on that server, so a reader makes the address from the server its listener uses, and opens it only when the listener asks (§9).
 
 ### 5.5 Chapters
 
@@ -490,6 +518,7 @@ An unknown value is read as the default. The defaults by kind are informative, n
 | fragments | never | no | 10 / 30 s | no |
 | rym_list | never | within a section | 10 / 30 s | no |
 | mixtape | never | no | 10 / 30 s | no |
+| song_list | never | no | 10 / 30 s | no |
 
 ## 9. Validity and what readers do
 
@@ -595,6 +624,7 @@ A collection is untrusted input.
 | `examples/audiobook.json` | A book in two files, with chapters, remembered positions and speed control |
 | `examples/fragments.json` | Favourite stretches from two long sets, as items with `start_ms` and `end_ms` |
 | `examples/rym-list.json` | A RateYourMusic round: two albums with covers, native names and pronunciation, English translations, and a timed lyrics file with translations (`examples/rym-list/`) |
+| `examples/song-list.json` | A song list: three songs from three albums, each in its album's section, with what each is about, why it is here, its own page and rating, and one album's `source` in a music library |
 | `examples/invalid/*.json` | Broken manifests. Each file's name says what's wrong with it |
 
 The people and places are made up. The manifests other than `complete/` name audio files that aren't shipped, so only `complete/` exercises rules 2 and 3.
